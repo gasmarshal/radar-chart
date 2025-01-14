@@ -61,19 +61,17 @@ const drawRadarChart = () => {
       ctx.lineTo(x, y);
     }
     ctx.closePath();
-    ctx.fillStyle = color;
     ctx.strokeStyle = color;
     ctx.globalAlpha = 0.5;
-    ctx.fill();
     ctx.globalAlpha = 1;
     ctx.stroke();
   };
 
   // Gambar polygon untuk data pertama
-  drawDataPolygon(data1, "rgba(255, 0, 0, 0.5)");
+  drawDataPolygon(data1, "red");
 
   // Gambar polygon untuk data kedua
-  drawDataPolygon(data2, "rgba(0, 128, 255, 0.5)");
+  drawDataPolygon(data2, "blue");
 
   // Gambar label
   ctx.fillStyle = "white";
